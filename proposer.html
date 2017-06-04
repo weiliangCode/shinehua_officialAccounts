@@ -21,58 +21,56 @@
 <body>
   <div class="inputs">
     <div class="input-group">
-      <span class="input-group-addon">公司名</span>
-      <input type="text" class="form-control" placeholder="请输入您的公司名" aria-describedby="basic-addon1">
+      <span class="input-group-addon ">公司名</span>
+      <input type="text" class="form-control J_companyName" placeholder="请输入您的公司名" aria-describedby="basic-addon1">
     </div>
     <div class="input-group">
       <span class="input-group-addon">联系人</span>
-      <input type="text" class="form-control" placeholder="请输入联系人" aria-describedby="basic-addon1">
+      <input type="text" class="form-control J_name" placeholder="请输入联系人" aria-describedby="basic-addon1">
     </div>
     <div class="input-group">
       <span class="input-group-addon">手机号</span>
-      <input type="tel" class="form-control" placeholder="请输入您的手机号码" aria-describedby="basic-addon1">
+      <input type="tel" class="form-control J_phone" placeholder="请输入您的手机号码" aria-describedby="basic-addon1">
     </div>
     <div class="input-group">
       <span class="input-group-addon">验证码</span>
-      <input type="number" class="form-control" placeholder="请输入验证码" aria-label="Amount (to the nearest dollar)">
+      <input type="number" class="form-control J_QRcode" placeholder="请输入验证码" aria-label="Amount (to the nearest dollar)">
       <span class="input-group-addon J_getCode">获取验证码</span>
     </div>
     <div class="input-group">
-      <!--<span class="input-group-addon">服务类型</span>-->
-      <!--<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">-->
       <p>服务类型</p>
       <div class="checkbox">
         <label>
-          <input type="checkbox"> 企业官网
+          <input type="checkbox" class="J_serve"> 企业官网
         </label>
         <label>
-          <input type="checkbox"> 微信公众号
+          <input type="checkbox" class="J_serve"> 微信公众号
         </label>
         <label>
-          <input type="checkbox"> 后台开发
+          <input type="checkbox" class="J_serve"> 后台开发
         </label>
         <label>
-          <input type="checkbox"> APP开发
+          <input type="checkbox" class="J_serve"> APP开发
         </label>
         <label>
-          <input type="checkbox"> 网站开发
+          <input type="checkbox" class="J_serve"> 网站开发
         </label>
         <label>
-          <input type="checkbox"> 微场景开发
+          <input type="checkbox" class="J_serve"> 微场景开发
         </label>
       </div>
     </div>
     <div class="input-group">
       <span class="input-group-addon">预估金额</span>
-      <input type="number" class="form-control" placeholder="填写您认为合适的服务价格" aria-describedby="basic-addon1">
+      <input type="number" class="form-control J_price" placeholder="填写您认为合适的服务价格" aria-describedby="basic-addon1">
     </div>
     <div class="input-group">
       <span class="input-group-addon">需求备注</span>
       <div class="detail-input">
-        <textarea class="form-control" placeholder="请描述您的具体要求，我们可以更好的为您服务（选填）" rows="3"></textarea>
+        <textarea class="form-control J_explain" placeholder="请描述您的具体要求，我们可以更好的为您服务（选填）" rows="3"></textarea>
       </div>
     </div>
-    <button type="button" class="btn btn-primary btn-lg btn-block bottomBtn">提交申请</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block bottomBtn J_submit">提交申请</button>
 
   </div>
 

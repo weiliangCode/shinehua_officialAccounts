@@ -29,4 +29,33 @@ $(function () {
 
   })
 
+
+  //提交表单
+  $('.J_submit').on('click', function () {
+    var companyName = $('.J_companyName').val();
+    var name = $('.J_name').val();
+    var phone = $('.J_phone').val();
+    var QRcode = $('.J_QRcode').val();
+    var price = $('.J_price').val();
+    var explain = $('.J_explain').val();
+
+
+    console.log(companyName);
+    console.log(name);
+    console.log(phone);
+    console.log(QRcode);
+    console.log(price);
+    console.log(explain);
+    console.log($('.J_serve').eq(0)[0].checked);
+    console.log($('.J_serve').eq(1)[0].checked);
+    console.log($('.J_serve').eq(2)[0].checked);
+    console.log($('.J_serve').eq(3)[0].checked);
+    console.log($('.J_serve').eq(4)[0].checked);
+    console.log($('.J_serve').eq(5)[0].checked);
+
+    var reg = /^[1][3578][0-9]{9}$/;
+    if (!(reg.test(phone))) {
+      console.log("手机号输入有误")
+    }
+  })
 })
