@@ -1,54 +1,24 @@
 var dev = "true",
-  devUrl = "http://localhost/health_mui/saver/",
+  devUrl = "http://localhost/shinehua_officialAccounts/serve/",
   // devUrl = "http://shinehua.duapp.com/saver/",
-  url = "http://demo.lmqde.com/api/";
+  url = "http://demo.lmqde.com/";
 
 
-//商品列表
-function getGoodslist() {
+//获得验证码
+function getQrCode() {
   if (dev === "true")
-    return devUrl + 'goods/goodslist.php';
+    return devUrl + 'visitor/sendcode.php';
   else
-    return url + 'goods/goodslist'
+    return url + 'visitor/sendcode'
 }
 
-//商品详情
-function getGoodsInfo() {
+
+//提交表单数据
+function getSubmit() {
   if (dev === "true")
-    return devUrl + 'goods/goodsinfo.php';
+    return devUrl + 'visitor/getfrom.php';
   else
-    return url + 'goods/goodsinfo'
+    return url + 'visitor/getfrom'
 }
 
-//添加收藏
-function getGoodsCollection() {
-  if (dev === "true")
-    return devUrl + 'goods/collection.php';
-  else
-    return url + 'goods/collection'
-}
-
-//添加关注
-function getGoodsNotice() {
-  if (dev === "true")
-    return devUrl + 'goods/notice.php';
-  else
-    return url + 'goods/notice'
-}
-
-//当前用户关注的商品列表
-function getUserNotice() {
-  if (dev === "true")
-    return devUrl + 'user/notice.php';
-  else
-    return url + 'user/notice'
-}
-
-//当前用户收藏的商品列表
-function getUserCollection() {
-  if (dev === "true")
-    return devUrl + 'user/collection.php';
-  else
-    return url + 'user/collection'
-}
 
