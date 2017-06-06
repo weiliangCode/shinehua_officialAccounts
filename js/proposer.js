@@ -4,16 +4,26 @@ $(function () {
     if (!getCodeFlog) {
       return;
     }
+    var phone = $('.J_phone').val();
+    var reg1 = /^[1][3578][0-9]{9}$/;
+    if (!(reg1.test(phone))) {
+      $('.J_prompt').css('display', 'block');
+      $('.J_message').html('手机号输入有误!')
+      return;
+    }
     var self = $(this);
     getCodeFlog = false;
     $(this).html('60s');
 
-    //获得验证码
+   //发送验证码
     $.post(getCompanySendcode(), {
-
+      company:{
+         phone: phone,
+      }
     }, function (data) {
-      console.log(data);
+      // console.log(data);
     })
+
 
     var time_num = 60;
     var time = setInterval(function () {
@@ -36,7 +46,7 @@ $(function () {
     var phone = $('.J_phone').val();
     var QRcode = $('.J_QRcode').val();
     var price = $('.J_price').val();
-    var note = $('.J_explain').val();
+    var note = $('.J_note').val() ? $('.J_note').val() : 'null';
 
     var scene = 0;
     $('.J_serve').each(function () {
@@ -64,7 +74,7 @@ $(function () {
       return;
     }
 
-    var reg2 = /^[0-9]{6}$/;
+    var reg2 = /^[0-9]{5}$/;
     if (!(reg2.test(QRcode))) {
       $('.J_prompt').css('display', 'block');
       $('.J_message').html('验证码输入有误!')
@@ -76,8 +86,6 @@ $(function () {
       $('.J_message').html('请至少勾选一项服务!')
       return;
     }
-
-
 
     //提交表单到后台
     $.post(getCompanyGetfrom(), {
@@ -97,9 +105,14 @@ $(function () {
         $('.J_message').html('申请提交成功，请保持手机畅通，我们会尽快与您联系！!')
         console.log(obj.message);
       } else {
-        $('.J_prompt').css('display', 'block');
-        $('.J_message').html('申请提交失败，请修改后提交！!')
-        console.log(obj.message);
+        if(obj.message == '短信验证码有误!') {
+          $('.J_prompt').css('display', 'block');
+          $('.J_message').html('短信验证码有误！!')
+        } else {
+          $('.J_prompt').css('display', 'block');
+          $('.J_message').html('申请提交失败，请修改后提交！!')
+          console.log(obj.message);
+        }
       }
     })
 
