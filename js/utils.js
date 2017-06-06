@@ -1,6 +1,6 @@
-var dev = "false",
-  devUrl = "http://localhost/shinehua_officialAccounts/serve/",
-  // devUrl = "http://shinehua.duapp.com/saver/",
+var dev = "true",
+  // devUrl = "http://localhost/shinehua_officialAccounts/serve/",
+  devUrl = "http://shinehua.duapp.com/serve/",
   url = "http://demo.lmqde.com/";
 
 
