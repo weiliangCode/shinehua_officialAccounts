@@ -46,7 +46,7 @@ $(function () {
     var phone = $('.J_phone').val();
     var QRcode = $('.J_QRcode').val();
     var price = $('.J_price').val();
-    var note = $('.J_note').val() ? $('.J_note').val() : 'null';
+    var note = $('.J_note').val();
 
     var scene = 0;
     $('.J_serve').each(function () {

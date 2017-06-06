@@ -51,7 +51,7 @@ $(function () {
     var companyName = $('.J_companyName').val();
     var phone = $('.J_phone').val();
     var QRcode = $('.J_QRcode').val();
-    var note = $('.J_note').val() ? $('.J_note').val() : 'null';
+    var note = $('.J_note').val();
 
     var scene = 0;
     $('.J_serve').each(function () {
