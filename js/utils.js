@@ -1,8 +1,7 @@
-var dev = "true",
-  // devUrl = "http://localhost/shinehua_officialAccounts/serve/",
-  devUrl = "http://shinehua.duapp.com/serve/",
+var dev = "false",
+  devUrl = "http://localhost/shinehua_officialAccounts/serve/",
+  // devUrl = "http://shinehua.duapp.com/serve/",
   url = "http://demo.lmqde.com/";
-
 
 
 //对接渠道 - 获得验证码
@@ -24,19 +23,17 @@ function getSubmit() {
 
 
 //接单 - 获得验证码
-function getCompanySendcode(){
-	if (dev === "true")
+function getCompanySendcode() {
+  if (dev === "true")
     return devUrl + 'company/sendcode.php';
   else
     return url + 'company/sendcode'
 }
 
 //接单 - 提交表单数据
-function getCompanyGetfrom(){
-	if (dev === "true")
+function getCompanyGetfrom() {
+  if (dev === "true")
     return devUrl + 'company/getfrom.php';
   else
     return url + 'company/getfrom'
 }
-
-

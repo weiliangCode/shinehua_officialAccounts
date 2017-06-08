@@ -48,11 +48,8 @@ body,.inputs{
 }*/
 
 .bottomBtn{
-  position: absolute;
-  left: 0;
-  bottom: 0;
   margin-bottom: 5px;
-  z-index: 100;
+  margin-top: 20px;
 }
 
 /*接入渠道选择*/
